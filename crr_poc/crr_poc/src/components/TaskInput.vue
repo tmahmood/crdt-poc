@@ -12,12 +12,12 @@ import {reloadAllTodosList} from "../store";
 let taskTitle = '';
 
 const ctx = inject<Ctx>('ctx') as Ctx;
-let {insert} = useDbHelper(ctx);
+let {insert} = useDbHelper();
 
 const addTask = (event: Event) => {
   let task = (event.target as HTMLInputElement).value;
   let t = nanoid();
-  insert('todo', [t, task, 0]);
+  insert(ctx, 'todo', [t, task, 0]);
   console.log(task);
   taskTitle = '';
   reloadAllTodosList(ctx);

@@ -13,8 +13,8 @@ export const store = reactive({
 })
 
 export const reloadAllTodosList = async (ctx: Ctx) => {
-    let {select} = useDbHelper(ctx);
-    let todos = await select('todo');
+    let {select} = useDbHelper();
+    let todos = await select(ctx, 'todo');
     store.allTodos = [];
     for (const todo of todos) {
         store.allTodos.push({

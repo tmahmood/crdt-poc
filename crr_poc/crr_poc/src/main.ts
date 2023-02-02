@@ -10,9 +10,9 @@ import {wdbRtc} from "@vlcn.io/sync-p2p";
 // @ts-ignore
 import wasmUrl from "@vlcn.io/wa-crsqlite/wa-sqlite-async.wasm?url";
 import {Ctx} from "./Ctx";
-import {DbDsl, dslToSql} from "./json_to_sqlite";
 import {defineConfig} from "vite";
 import { JsonToSql } from 'web-server-wasm';
+import {DbDsl, useDbHelper} from "./composables/dbHelper";
 
 
 const main = async () => {
@@ -47,6 +47,7 @@ const main = async () => {
             }
         ]
     };
+    let {dslToSql} = useDbHelper();
     let db = await dslToSql(dsl as DbDsl)
     const r = await db.execA("SELECT crsql_siteid()");
     const siteid = uuidStringify(r[0][0]);

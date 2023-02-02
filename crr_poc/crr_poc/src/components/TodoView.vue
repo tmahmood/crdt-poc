@@ -25,14 +25,14 @@ const props = defineProps<{
 }>();
 
 let ctx: Ctx = inject("ctx") as Ctx;
-let {updateRow, deleteRow} = useDbHelper(ctx);
+let {updateRow, deleteRow} = useDbHelper();
 
 const updateTask = (action: string) => {
   const {completed, id} = props.item;
   if (action === "toggle") {
-    updateRow('todo', id, { completed: completed})
+    updateRow(ctx, 'todo', id, { completed: completed})
   } else if (action === "delete") {
-    deleteRow('todo', id);
+    deleteRow(ctx, 'todo', id);
   } else {
 
   }
