@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/crr_poc/crr_poc.iml" filepath="$PROJECT_DIR$/crr_poc/crr_poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wasm-dev.iml" filepath="$PROJECT_DIR$/.idea/wasm-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-server-wasm/web-server-wasm.iml" filepath="$PROJECT_DIR$/web-server-wasm/web-server-wasm.iml" />
+    </modules>
+  </component>
+</project>
