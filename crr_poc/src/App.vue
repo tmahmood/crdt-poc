@@ -15,6 +15,9 @@ import Footer from "./components/Footer.vue";
     </header>
     <section class="main">
       <Suspense>
+        <UserView />
+      </Suspense>
+      <Suspense>
         <TaskList />
         <template #fallback>
           Loading ...

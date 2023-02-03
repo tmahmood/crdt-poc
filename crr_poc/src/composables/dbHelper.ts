@@ -84,5 +84,21 @@ export const useDbHelper = () => {
         await ctx.db.exec(query, bind);
     };
 
-    return {dslToSql, select, insert, deleteRow, updateRow};
+    const dbChangeSets = async (ctx: Ctx, currentVersion: number) => {
+        return await ctx.db.execA("SELECT * FROM crsql_changes where db_version > ?", [currentVersion]);
+    }
+
+    const dbMergeChanges = async (ctx: Ctx, changes: any) => {
+        await ctx.db.transaction(async () => {
+            for (const cs of changes) {
+                await ctx.db.exec(`INSERT INTO crsql_changes VALUES (?, ?, ?, ?, ?, ?, ?)`, cs);
+            }
+        });
+    }
+
+    const dbCurrentVersion = async(ctx: Ctx) => {
+        return (await ctx.db.execA(`SELECT crsql_dbversion()`))[0][0];
+    }
+
+    return {dslToSql, select, insert, deleteRow, updateRow, dbChangeSets, dbMergeChanges, dbCurrentVersion};
 }

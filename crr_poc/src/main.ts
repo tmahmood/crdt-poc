@@ -47,7 +47,7 @@ const main = async () => {
             }
         ]
     };
-    let {dslToSql} = useDbHelper();
+    let {dslToSql, dbChangeSets} = useDbHelper();
     let db = await dslToSql(dsl as DbDsl)
     const r = await db.execA("SELECT crsql_siteid()");
     const siteid = uuidStringify(r[0][0]);
@@ -67,18 +67,23 @@ const main = async () => {
     window.onbeforeunload = () => {
         db.close();
     };
+
+    let ctx = {
+        db,
+        siteid: siteid,
+        rtc,
+        rx,
+    };
+
+    let changes = await dbChangeSets(ctx, -1)
+    console.log(changes);
     // let rows = await db.execA("select * from crsql_changes();");
     // console.log("Changes: ", rows);
     // rows = await db.execA("SELECT * FROM todo");
     // console.log(rows);
     // rows = await db.execA("SELECT * FROM notes");
     // console.log(rows);
-    startApp({
-        db,
-        siteid: siteid,
-        rtc,
-        rx,
-    });
+    startApp(ctx);
 
 }
 
@@ -88,4 +93,4 @@ const startApp = (ctx: Ctx) => {
     app.mount('#app')
 }
 
-main();
+await main();
