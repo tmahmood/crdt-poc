@@ -4,7 +4,9 @@ import { DB } from "@vlcn.io/wa-crsqlite";
 
 export type Ctx = {
     db: DB;
-    siteid: string;
+    site_id: string;
     rtc: Awaited<ReturnType<typeof wdbRtc>>;
     rx: Awaited<ReturnType<typeof tblrx>>;
+
+    ws: WebSocket;
 };

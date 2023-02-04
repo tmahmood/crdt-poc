@@ -88,10 +88,20 @@ export const useDbHelper = () => {
         return await ctx.db.execA("SELECT * FROM crsql_changes where db_version > ?", [currentVersion]);
     }
 
-    const dbMergeChanges = async (ctx: Ctx, changes: any) => {
+    const dbMergeChanges = async (ctx: Ctx, changes: Array<Array<any>>) => {
+        let bindings: Array<string> = [];
+        for (let i = 0; i < changes[0].length; i++) {
+            bindings.push("?")
+        }
         await ctx.db.transaction(async () => {
+            let q = `INSERT INTO crsql_changes VALUES (${bindings.join(',')})`;
             for (const cs of changes) {
-                await ctx.db.exec(`INSERT INTO crsql_changes VALUES (?, ?, ?, ?, ?, ?, ?)`, cs);
+                let last: Array<any> = cs.pop();
+                let nu: Uint8Array = Uint8Array.from(last);
+                cs.push(nu);
+                ctx.db.exec(q, cs).then(() => {
+                    console.log("success!")
+                });
             }
         });
     }

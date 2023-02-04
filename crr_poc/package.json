@@ -14,7 +14,7 @@
     "@vlcn.io/wa-crsqlite": "^0.7.2",
     "uuid": "^9.0.0",
     "vue": "^3.2.45",
-    "web-server-wasm": "file:../../web-server-wasm/pkg",
+    "web-server-wasm": "file:../web-server-wasm/pkg",
     "nanoid": "^4.0.0"
   },
   "devDependencies": {
