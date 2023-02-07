@@ -1,5 +1,5 @@
 import {Ctx} from "../Ctx";
-import sqliteWasm from "@vlcn.io/wa-crsqlite";
+import sqliteWasm, {DB} from "@vlcn.io/wa-crsqlite";
 import wasmUrl from "@vlcn.io/wa-crsqlite/wa-sqlite-async.wasm?url";
 import {reloadAllTodosList} from "../store";
 
@@ -124,71 +124,95 @@ export const useDbHelper = () => {
             let q = `INSERT INTO crsql_changes
                      VALUES (${bindings.join(',')})`;
             for (const cs of changes) {
-                let last: Array<any> = cs.pop();
-                let nu: Uint8Array = Uint8Array.from(last);
+                let nu: Uint8Array = new Uint8Array(16);
+                let last: {[index: number]: number} = cs.pop();
+                for (const lastKey in last) {
+                    nu[lastKey] = last[lastKey];
+                }
                 cs.push(nu);
-                await ctx.db.exec(q, cs);
+                ctx.db.exec(q, cs).catch(() => {
+                    console.log("Failed to save: ", cs)
+                });
             }
         });
     }
 
-    const dbCurrentVersion = async (ctx: Ctx) => {
-        return (await ctx.db.execA(`SELECT crsql_dbversion()`))[0][0];
+    const dbCurrentVersion = async (db: DB) => {
+        return (await db.execA(`SELECT crsql_dbversion()`))[0][0];
     }
 
     const onmessage = async (ctx: Ctx, d: string) => {
         let j: MsgData = JSON.parse(d);
-        console.log(d);
+        let toSend = undefined;
         if (j.command === "send_all") {
             let changes = await dbChangeSets(ctx, -1);
-            console.log("send_all:", changes);
+            console.log("send_all");
             let snd: SendData = {
                 kind: "ChangeSet",
                 message: JSON.stringify(changes),
             }
-            if(j.client) {
+            if (j.client) {
                 snd.client = j.client;
             }
-            let to_send = JSON.stringify(snd);
-            ctx.ws.send(to_send);
+            toSend = {
+                msg: JSON.stringify(snd), after: () => {
+                }
+            };
+            queueMessage(ctx, toSend)
         } else if (j.command == "send") {
             if (j.version) {
                 let version = parseInt(j.version);
-                console.log("version: ", version);
+                console.log("send", j.version);
                 let changes = await dbChangeSets(ctx, version);
-                console.log("send:", changes);
-                let to_send = JSON.stringify({
+                let snd = JSON.stringify({
                     kind: "ChangeSet",
                     message: JSON.stringify(changes),
                 } as SendData);
-                ctx.ws.send(to_send);
-                ctx.currentVersion = version;
+                toSend = {
+                    msg: snd, after: () => {
+                        console.log("Called after, [send]")
+                        ctx.currentVersion = version
+                    }
+                };
+                queueMessage(ctx, toSend)
             }
         } else if (j.command == "apply") {
             if (j.message) {
                 let incoming = JSON.parse(j.message);
-                console.log(incoming);
                 await dbMergeChanges(ctx, incoming);
                 console.log("Merged ...")
-                let v = await dbCurrentVersion(ctx);
-                ctx.ws.send(JSON.stringify({
+                let v = await dbCurrentVersion(ctx.db);
+                let snd = JSON.stringify({
                     kind: "ACK",
                     message: v.toString()
-                } as SendData));
-                await reloadAllTodosList(ctx)
+                } as SendData);
+                toSend = {
+                    msg: snd,
+                    after: () => {
+                        console.log("Called after, [apply]")
+                        reloadAllTodosList(ctx).then(() => {
+                            console.log("Reloaded task list")
+                        })
+                    }
+                }
+                queueMessage(ctx, toSend)
             }
         } else {
             console.log("Unhandled")
         }
-        reloadAllTodosList(ctx).then(() => {
-            console.log("Reloaded")
-        });
     }
 
 
+    const queueMessage = (ctx: Ctx, msg: { msg: string, after: any }) => {
+        ctx.pendingMessages.push(msg);
+    }
+
+    const sendPendingMessages = (ctx: Ctx) => {
+    }
+
     return {
         dslToSql, select, insert, deleteRow, updateRow, dbChangeSets, dbMergeChanges, dbCurrentVersion,
-        onmessage
+        onmessage, queueMessage, sendPendingMessages
 
     };
 }

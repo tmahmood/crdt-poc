@@ -8,12 +8,12 @@ import tblrx from "@vlcn.io/rx-tbl";
 import {wdbRtc} from "@vlcn.io/sync-p2p";
 // @ts-ignore
 import wasmUrl from "@vlcn.io/wa-crsqlite/wa-sqlite-async.wasm?url";
-import {Ctx} from "./Ctx";
+import {Ctx, initCtx} from "./Ctx";
 import {DbDsl, MsgData, useDbHelper} from "./composables/dbHelper";
 import {reloadAllTodosList} from "./store";
 
 const main = async () => {
-    let dsl = {
+    let dsl: DbDsl = {
         "db": "p2p-wdb-todomvc-9",
         "tables": [
             {
@@ -44,31 +44,17 @@ const main = async () => {
             }
         ]
     };
-    let {dslToSql, dbCurrentVersion} = useDbHelper();
-    let db = await dslToSql(dsl as DbDsl)
-    const r = await db.execA("SELECT crsql_siteid()");
-    const site_id = uuidStringify(r[0][0]);
-    const rx = await tblrx(db);
 
+
+    let wsAddress = 'ws://0.0.0.0:9000/ws';
+    // let wsAddress = new WebSocket('wss://todo-in-browser.godly.dev:9000/ws');
+    // console.log(ws);
+
+    let ctx: Ctx = await initCtx(dsl, wsAddress);
     window.onbeforeunload = () => {
-        db.close();
-    };
-
-    let ws = new WebSocket('ws://0.0.0.0:9000/ws');
-    let pendingSends: Array<string> = [];
-    let ctx: Ctx = {
-        db,
-        site_id: site_id,
-        rx,
-        ws,
-        pendingSends,
-    };
-    ctx.currentVersion = await dbCurrentVersion(ctx);
-
-    ctx.ws.onmessage = (c) => {
-        let d = c.data;
-        useDbHelper().onmessage(ctx, d);
+        ctx.db.close().then(() => {});
     }
+
     startApp(ctx);
 }
 

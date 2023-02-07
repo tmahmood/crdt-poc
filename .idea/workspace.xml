@@ -8,11 +8,23 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="All kind of syncing now works!">
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tpl/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/entry_point.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_microservice.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_microservice.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/Peers.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/composables/dbHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/composables/dbHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +42,9 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/crr_poc/node_modules/@vlcn.io/wa-crsqlite/src/wrapper.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="minikube" />
@@ -60,21 +75,33 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/web-server-wasm&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/tpl&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.build.tool.cargo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crr_poc/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tpl" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build" />
+      <recent name="$PROJECT_DIR$/conf" />
+      <recent name="$PROJECT_DIR$/build/files" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Cargo.Run server">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="run --package wasm-dev --bin wasm-dev" />
+      <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -90,6 +117,27 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="build_microservice.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_microservice.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/crr_poc/package.json" />
       <command value="run" />
@@ -104,6 +152,7 @@
       <list>
         <item itemvalue="Cargo.Run server" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="Shell Script.build_microservice.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +170,9 @@
       <updated>1650085328581</updated>
       <workItem from="1675425313778" duration="9000" />
       <workItem from="1675425357106" duration="37536000" />
-      <workItem from="1675495085552" duration="15743000" />
+      <workItem from="1675495085552" duration="23997000" />
+      <workItem from="1675748598332" duration="142000" />
+      <workItem from="1675748762758" duration="20484000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -137,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675495157142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="All kind of syncing now works!">
+      <created>1675510968255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675510968255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +204,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moved around some files" />
     <MESSAGE value="Syncing is working almost" />
-    <option name="LAST_COMMIT_MESSAGE" value="Syncing is working almost" />
+    <MESSAGE value="All kind of syncing now works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="All kind of syncing now works!" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

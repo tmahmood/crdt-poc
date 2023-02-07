@@ -82,9 +82,10 @@ impl SimpleStateroomService for SharedCounterServer {
             None,
         );
         ctx.send_message(client, &serde_json::to_string(&msg).unwrap());
+        println!("{:?}", self.all_clients);
         let first_client = self.all_clients.first().unwrap();
         if first_client.0 != client.0 {
-            println!("sending data from: {} -> {}", first_client.0, client.0);
+            println!("Sending data from: {} -> {}", first_client.0, client.0);
             let msg = SendMessageData::new(
                 "send_all",
                 None,
@@ -98,11 +99,13 @@ impl SimpleStateroomService for SharedCounterServer {
     fn disconnect(&mut self, client: ClientId, context: &impl StateroomContext) {
         if let Ok(idx) = self.all_clients.binary_search(&client) {
             self.all_clients.remove(idx);
+            println!("{:?}", self.all_clients);
         }
     }
 
     fn message(&mut self, cid: ClientId, _message: &str, ctx: &impl StateroomContext) {
         let message = _message.trim();
+        println!("{}", message);
         let message_data: RecvMessageData = match serde_json::from_str(message) {
             Ok(d) => d,
             Err(e) => {
@@ -126,10 +129,13 @@ impl SimpleStateroomService for SharedCounterServer {
                 }
             }
             MessageKind::ChangeSet => {
+
                 let msg = SendMessageData::new(
                     "apply", None, None, Some(message_data.message));
                 let m = serde_json::to_string(&msg).unwrap();
+                println!("{:?}", msg);
                 if let Some(client) = message_data.client {
+                    println!("should I be here?");
                     ctx.send_message(
                         ClientId(client),
                         &m);

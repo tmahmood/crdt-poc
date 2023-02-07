@@ -1,5 +1,5 @@
 <template>
-  <input v-model="taskTitle" v-on:keyup.enter="addTask($event)" class="new-todo">
+  <input v-model="taskTitle" v-on:keyup.enter="addTask" class="new-todo">
 </template>
 
 <script setup lang="ts">
@@ -9,17 +9,16 @@ import {inject, ref} from "vue";
 import {useDbHelper} from "../composables/dbHelper";
 import {reloadAllTodosList} from "../store";
 
-let taskTitle = '';
+let taskTitle = ref('');
 
 const ctx = inject<Ctx>('ctx') as Ctx;
 let {insert} = useDbHelper();
 
-const addTask = (event: Event) => {
-  let task = (event.target as HTMLInputElement).value;
+const addTask = () => {
+  console.log(taskTitle);
   let t = nanoid();
-  insert(ctx, 'todo', [t, task, 0]);
-  console.log(task);
-  taskTitle = '';
+  insert(ctx, 'todo', [t, taskTitle.value, 0]);
+  taskTitle.value = '';
   reloadAllTodosList(ctx);
 }
 
