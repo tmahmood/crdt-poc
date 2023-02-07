@@ -45,11 +45,7 @@ const main = async () => {
         ]
     };
 
-
-    //let wsAddress = 'ws://0.0.0.0:9000/ws';
-    let wsAddress = 'wss://todo-in-browser.godly.dev/ws';
-    // console.log(ws);
-
+    let wsAddress: string = import.meta.env.VITE_WS_SERVER;
     let ctx: Ctx = await initCtx(dsl, wsAddress);
     window.onbeforeunload = () => {
         ctx.db.close().then(() => {});

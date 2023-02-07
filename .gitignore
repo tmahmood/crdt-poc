@@ -2,3 +2,5 @@
 /crr_poc/crr_poc/.vscode/
 /server/target/
 /static-web-server/
+/crr_poc/.env
+/crr_poc/.env.production

@@ -8,12 +8,12 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Added wss server loading from config file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_microservice.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_microservice.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.build_microservice.sh" />
         <item itemvalue="Cargo.Run server" />
+        <item itemvalue="Shell Script.build_microservice.sh" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -161,7 +161,7 @@
       <workItem from="1675425357106" duration="37536000" />
       <workItem from="1675495085552" duration="23997000" />
       <workItem from="1675748598332" duration="142000" />
-      <workItem from="1675748762758" duration="22350000" />
+      <workItem from="1675748762758" duration="26570000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675772414593</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Now it totally works with wss and websocket and realtime updates">
+      <created>1675774519377</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675774519377</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +209,9 @@
     <MESSAGE value="Syncing is working almost" />
     <MESSAGE value="All kind of syncing now works!" />
     <MESSAGE value="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound" />
+    <MESSAGE value="Now it totally works with wss and websocket and realtime updates" />
+    <MESSAGE value="Added wss server loading from config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added wss server loading from config file" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

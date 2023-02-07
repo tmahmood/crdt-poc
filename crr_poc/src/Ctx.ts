@@ -29,6 +29,19 @@ export const initCtx = async (dsl: DbDsl, wsAddress: string): Promise<Ctx> => {
     let r = await db.execA("SELECT crsql_siteid()");
     let siteId = uuidStringify(r[0][0]);
     let ws = new WebSocket(wsAddress);
+
+    // ws.onclose = function(e) {
+    //     console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+    //     setTimeout(function() {
+    //         connect();
+    //     }, 1000);
+    // };
+
+    // ws.onerror = function(err) {
+    //     console.error('Socket encountered error: ', err.message, 'Closing socket');
+    //     ws.close();
+    // };
+
     ws.onopen = () => {
         console.log("Registering onopen ...");
         setInterval(() => {
@@ -46,12 +59,13 @@ export const initCtx = async (dsl: DbDsl, wsAddress: string): Promise<Ctx> => {
             }
         }, 50);
     }
-    let currentVersion = await useDbHelper().dbCurrentVersion(db);
-    let ctx = new Ctx(db, siteId, rx, ws, currentVersion);
 
-    ctx.ws.onmessage = (c: MessageEvent) => {
+    ws.onmessage = (c: MessageEvent) => {
         useDbHelper().onmessage(ctx, c.data).then(() => {});
     }
+
+    let currentVersion = await useDbHelper().dbCurrentVersion(db);
+    let ctx = new Ctx(db, siteId, rx, ws, currentVersion);
 
     return ctx;
 
