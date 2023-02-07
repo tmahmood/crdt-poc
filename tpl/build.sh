@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+docker stop todo-in-browser.godly.dev
+docker rm todo-in-browser.godly.dev
+
 docker build . -t todo-in-browser.godly.dev
 
 docker run -v godly.dev-certbot-www:/var/www/certbot -v godly.dev-certbot-etc:/etc/letsencrypt --rm godly.dev-certbot certonly -n --keep --webroot --webroot-path /var/www/certbot/ -d todo-in-browser.godly.dev --register-unsafely-without-email --agree-tos || exit 1

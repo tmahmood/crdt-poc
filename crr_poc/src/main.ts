@@ -46,8 +46,8 @@ const main = async () => {
     };
 
 
-    let wsAddress = 'ws://0.0.0.0:9000/ws';
-    // let wsAddress = new WebSocket('wss://todo-in-browser.godly.dev:9000/ws');
+    //let wsAddress = 'ws://0.0.0.0:9000/ws';
+    let wsAddress = 'wss://todo-in-browser.godly.dev/ws';
     // console.log(ws);
 
     let ctx: Ctx = await initCtx(dsl, wsAddress);

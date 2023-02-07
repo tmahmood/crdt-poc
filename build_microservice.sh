@@ -28,3 +28,9 @@ cd ../
 cp tpl/* build/
 mv build/entry_point.sh build/files/
 
+cd ../ | exit
+if [ -f "tmahmood.pem" ]; then
+  rsync -e 'ssh -i tmahmood.pem' -r wasm-dev/build/ ubuntu@godly.dev:todo-in-browser
+else
+  echo "Check directory"
+fi

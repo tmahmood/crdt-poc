@@ -9,22 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tpl/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/entry_point.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_microservice.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_microservice.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/Peers.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/composables/dbHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/composables/dbHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/server/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +88,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo.Run server">
+  <component name="RunManager" selected="Shell Script.build_microservice.sh">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
@@ -150,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Shell Script.build_microservice.sh" />
         <item itemvalue="Cargo.Run server" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="Shell Script.build_microservice.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +161,7 @@
       <workItem from="1675425357106" duration="37536000" />
       <workItem from="1675495085552" duration="23997000" />
       <workItem from="1675748598332" duration="142000" />
-      <workItem from="1675748762758" duration="20484000" />
+      <workItem from="1675748762758" duration="22350000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -195,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675510968255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound">
+      <created>1675772414593</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675772414593</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +201,8 @@
     <MESSAGE value="Moved around some files" />
     <MESSAGE value="Syncing is working almost" />
     <MESSAGE value="All kind of syncing now works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="All kind of syncing now works!" />
+    <MESSAGE value="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
