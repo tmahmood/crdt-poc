@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ROOT_DIR=$(pwd)
+
 mkdir -p build/files/
 
 cd web-server-wasm || exit
@@ -28,9 +30,13 @@ cd ../
 cp tpl/* build/
 mv build/entry_point.sh build/files/
 
-cd ../ | exit
+cd "$ROOT_DIR" || exit
+cd ../ || exit
+pwd
 if [ -f "tmahmood.pem" ]; then
+  echo "Uploading ..."
   rsync -e 'ssh -i tmahmood.pem' -r wasm-dev/build/ ubuntu@godly.dev:todo-in-browser
 else
   echo "Check directory"
 fi
+cd "$ROOT_DIR" || exit

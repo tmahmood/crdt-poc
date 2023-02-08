@@ -8,12 +8,11 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Added wss server loading from config file">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_microservice.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_microservice.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Run server" />
         <item itemvalue="Shell Script.build_microservice.sh" />
+        <item itemvalue="Cargo.Run server" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -161,7 +160,7 @@
       <workItem from="1675425357106" duration="37536000" />
       <workItem from="1675495085552" duration="23997000" />
       <workItem from="1675748598332" duration="142000" />
-      <workItem from="1675748762758" duration="26570000" />
+      <workItem from="1675748762758" duration="29657000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -198,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675774519377</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added wss server loading from config file">
+      <created>1675780952065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675780952065</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
