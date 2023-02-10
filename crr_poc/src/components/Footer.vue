@@ -14,6 +14,17 @@
       <li>
         <a class="{{completed ? 'selected' : ''}}" @click.prevent="store.todoList.filter='completed'">Completed</a>
       </li>
+      <li>
+        <a href="/mars">Click me to mars</a>
+      </li>
+      <li>
+        <a href="/earth">Click me to earth</a>
+      </li>
+      <li>
+        <Suspense>
+          <FromInnerRouter></FromInnerRouter>
+        </Suspense>
+      </li>
     </ul>
 
   </footer>
@@ -22,6 +33,7 @@
 
 <script setup lang="ts">
 import {store} from "../store";
+import FromInnerRouter from "./FromInnerRouter.vue";
 const remaining = store.remaining;
 const all = store.todoList.filter === "all";
 const active = store.todoList.filter === "active";

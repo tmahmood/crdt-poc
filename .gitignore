@@ -4,3 +4,4 @@
 /static-web-server/
 /crr_poc/.env
 /crr_poc/.env.production
+/stress-test/target/
