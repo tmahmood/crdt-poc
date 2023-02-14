@@ -38,7 +38,11 @@ if ('function' === typeof importScripts) {
                     try {
                         return make_request(u).then((response: string) => {
                             if (response === '') {
-                                return fetch(request);
+                                if (u === '/' || u === '') {
+                                    return new Response("index.html");
+                                } else {
+                                    return fetch(request);
+                                }
                             } else {
                                 return new Response(response, {
                                     headers: {

@@ -207,12 +207,10 @@ export const useDbHelper = () => {
         ctx.pendingMessages.push(msg);
     }
 
-    const sendPendingMessages = (ctx: Ctx) => {
-    }
 
     return {
         dslToSql, select, insert, deleteRow, updateRow, dbChangeSets, dbMergeChanges, dbCurrentVersion,
-        onmessage, queueMessage, sendPendingMessages
+        onmessage, queueMessage
 
     };
 }
