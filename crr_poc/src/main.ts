@@ -2,11 +2,10 @@ import {createApp} from 'vue'
 import './style.css'
 import App from './App.vue'
 
-
 // @ts-ignore
 import wasmUrl from "@vlcn.io/wa-crsqlite/wa-sqlite-async.wasm?url";
-import {Ctx, initCtx} from "./Ctx";
-import {DbDsl} from "./composables/dbHelper";
+import {Ctx, DbDsl, initCtx } from 'crsqlite_helper';
+import {reloadAllTodosList} from "./store";
 
 const main = async () => {
     let dsl: DbDsl = {
@@ -42,7 +41,9 @@ const main = async () => {
     };
 
     let wsAddress: string = import.meta.env.VITE_WS_SERVER;
-    let ctx: Ctx = await initCtx(dsl, wsAddress);
+    let ctx: Ctx = await initCtx(dsl, wsAddress, (ctx: Ctx, messageData: any) => {
+        reloadAllTodosList(ctx);
+    }) ;
     startApp(ctx);
 }
 

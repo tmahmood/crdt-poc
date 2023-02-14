@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import {store, reloadAllTodosList} from "../store";
 import {inject} from "vue";
-import {Ctx} from "../Ctx";
+import {Ctx} from "crsqlite_helper";
 import TodoView from "./TodoView.vue";
 
 let ctx = inject<Ctx>("ctx") as Ctx;

@@ -7,17 +7,16 @@
         v-model="item.completed"
         v-on:change="updateTask('toggle')"
     />
-    <label>{{item.text}}</label>
+    <label>{{ item.text }}</label>
     <button class="destroy" v-on:click="updateTask('delete')"/>
   </div>
 </template>
 
 <script setup lang="ts">
 import {Todo} from "../todos";
-import {useDbHelper} from "../composables/dbHelper";
-import {Ctx} from "../Ctx";
 import {inject} from "vue";
 import {reloadAllTodosList} from "../store";
+import {Ctx, DbHelper} from 'crsqlite_helper';
 
 const props = defineProps<{
   item: Todo,
@@ -25,16 +24,14 @@ const props = defineProps<{
 }>();
 
 let ctx: Ctx = inject("ctx") as Ctx;
-let {updateRow, deleteRow} = useDbHelper();
 
 const updateTask = (action: string) => {
   const {completed, id} = props.item;
   if (action === "toggle") {
-    updateRow(ctx, 'todo', id, { completed: completed})
+    DbHelper.updateRow(ctx, 'todo', id, {completed: completed});
   } else if (action === "delete") {
-    deleteRow(ctx, 'todo', id);
+    DbHelper.deleteRow(ctx, 'todo', id);
   } else {
-
   }
   reloadAllTodosList(ctx);
 }

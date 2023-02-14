@@ -4,20 +4,18 @@
 
 <script setup lang="ts">
 import {nanoid} from "nanoid";
-import {Ctx} from "../Ctx";
+import {Ctx, DbHelper} from "crsqlite_helper";
 import {inject, ref} from "vue";
-import {useDbHelper} from "../composables/dbHelper";
 import {reloadAllTodosList} from "../store";
 
 let taskTitle = ref('');
 
 const ctx = inject<Ctx>('ctx') as Ctx;
-let {insert} = useDbHelper();
 
 const addTask = () => {
   console.log(taskTitle);
   let t = nanoid();
-  insert(ctx, 'todo', [t, taskTitle.value, 0]);
+  DbHelper.insert(ctx, 'todo', [t, taskTitle.value, 0]);
   taskTitle.value = '';
   reloadAllTodosList(ctx);
 }

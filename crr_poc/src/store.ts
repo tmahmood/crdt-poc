@@ -1,7 +1,6 @@
-import {inject, reactive} from "vue";
+import {reactive} from "vue";
 import {Todo, TodoList} from "./todos";
-import {Ctx} from "./Ctx";
-import {useDbHelper} from "./composables/dbHelper";
+import {Ctx, DbHelper} from "crsqlite_helper";
 
 export const store = reactive({
     allTodos: [] as Array<Todo>,
@@ -13,8 +12,7 @@ export const store = reactive({
 })
 
 export const reloadAllTodosList = async (ctx: Ctx) => {
-    let {select} = useDbHelper();
-    let todos = await select(ctx, 'todo');
+    let todos = await DbHelper.select(ctx, 'todo');
     store.allTodos = [];
     for (const todo of todos) {
         store.allTodos.push({

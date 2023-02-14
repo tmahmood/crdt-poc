@@ -1,7 +1,8 @@
-import {Ctx} from "./Ctx";
 import sqliteWasm, {DB} from "@vlcn.io/wa-crsqlite";
+import {stringify as uuidStringify} from "uuid";
 // @ts-ignore
 import wasmUrl from "@vlcn.io/wa-crsqlite/wa-sqlite-async.wasm?url";
+import tblrx from "@vlcn.io/rx-tbl";
 
 
 type ColumnTypes = "text" | "number" | "boolean";
@@ -57,9 +58,9 @@ export interface DbDsl {
 }
 
 
-export const useDbHelper = () => {
+export class DbHelper  {
 
-    const dslToSql = async (dbDsl: DbDsl) => {
+    static dslToSql = async (dbDsl: DbDsl) => {
         const sqlite = await sqliteWasm(() => wasmUrl);
         const db = await sqlite.open(dbDsl.db);
         for (const table of dbDsl.tables) {
@@ -71,12 +72,12 @@ export const useDbHelper = () => {
         return db;
     }
 
-    const select = async (ctx: Ctx, table: string) => {
+    static select = async (ctx: Ctx, table: string) => {
         const SELECT_QUERY: string = `select *
                                       from ${table}`;
         return await ctx.db.execA(SELECT_QUERY);
     }
-    const insert = async (ctx: Ctx, table: string, bind: Array<any>) => {
+    static insert = async (ctx: Ctx, table: string, bind: Array<any>) => {
         let bindings: Array<string> = [];
         for (let i = 0; i < bind.length; i++) {
             bindings.push("?")
@@ -84,16 +85,16 @@ export const useDbHelper = () => {
         const QUERY: string = `insert into ${table}
                                values (${bindings.join(',')})`;
         await ctx.db.exec(QUERY, bind);
-        await onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
+        await DbHelper.onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
     }
-    const deleteRow = async (ctx: Ctx, table: string, id: string) => {
+    static deleteRow = async (ctx: Ctx, table: string, id: string) => {
         await ctx.db.exec(`DELETE
                            FROM ${table}
                            WHERE id = ?`, [id]);
-        await onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
+        await DbHelper.onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
     };
 
-    const updateRow = async (ctx: Ctx, table: string, id: string, bindDict: { [name: string]: any }) => {
+    static updateRow = async (ctx: Ctx, table: string, id: string, bindDict: { [name: string]: any }) => {
         let bindings: Array<string> = [];
         let bind: Array<any> = [];
         for (const bindingsKey in bindDict) {
@@ -105,14 +106,14 @@ export const useDbHelper = () => {
                      SET ${bindings.join(', ')}
                      WHERE id = ?`;
         await ctx.db.exec(query, bind);
-        await onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
+        await DbHelper.onmessage(ctx, JSON.stringify({command: "send", version: ctx.currentVersion} as MsgData));
     };
 
-    const dbChangeSets = async (ctx: Ctx, currentVersion: number) => {
+    static dbChangeSets = async (ctx: Ctx, currentVersion: number) => {
         return await ctx.db.execA("SELECT * FROM crsql_changes where db_version > ?", [currentVersion]);
     }
 
-    const dbMergeChanges = async (ctx: Ctx, changes: Array<Array<any>>) => {
+    static dbMergeChanges = async (ctx: Ctx, changes: Array<Array<any>>) => {
         if (changes.length == 0) {
             return;
         }
@@ -137,15 +138,15 @@ export const useDbHelper = () => {
         });
     }
 
-    const dbCurrentVersion = async (db: DB) => {
+    static dbCurrentVersion = async (db: DB) => {
         return (await db.execA(`SELECT crsql_dbversion()`))[0][0];
     }
 
-    const onmessage = async (ctx: Ctx, d: string, calledAfter?: any) => {
+    static onmessage = async (ctx: Ctx, d: string, calledAfter?: any) => {
         let j: MsgData = JSON.parse(d);
         let toSend = undefined;
         if (j.command === "send_all") {
-            let changes = await dbChangeSets(ctx, -1);
+            let changes = await DbHelper.dbChangeSets(ctx, -1);
             console.log("send_all");
             let snd: SendData = {
                 kind: "ChangeSet",
@@ -160,12 +161,12 @@ export const useDbHelper = () => {
                     calledAfter && calledAfter();
                 }
             };
-            queueMessage(ctx, toSend)
+            DbHelper.queueMessage(ctx, toSend)
         } else if (j.command == "send") {
             if (j.version) {
                 let version = parseInt(j.version);
                 console.log("send", j.version);
-                let changes = await dbChangeSets(ctx, version);
+                let changes = await DbHelper.dbChangeSets(ctx, version);
                 let snd = JSON.stringify({
                     kind: "ChangeSet",
                     message: JSON.stringify(changes),
@@ -176,14 +177,14 @@ export const useDbHelper = () => {
                         calledAfter && calledAfter();
                     }
                 };
-                queueMessage(ctx, toSend)
+                DbHelper.queueMessage(ctx, toSend)
             }
         } else if (j.command == "apply") {
             if (j.message) {
                 let incoming = JSON.parse(j.message);
-                await dbMergeChanges(ctx, incoming);
+                await DbHelper.dbMergeChanges(ctx, incoming);
                 console.log("Merged ...")
-                let v = await dbCurrentVersion(ctx.db);
+                let v = await DbHelper.dbCurrentVersion(ctx.db);
                 let snd = JSON.stringify({
                     kind: "ACK",
                     message: v.toString()
@@ -195,7 +196,7 @@ export const useDbHelper = () => {
                         calledAfter && calledAfter();
                     }
                 }
-                queueMessage(ctx, toSend)
+                DbHelper.queueMessage(ctx, toSend)
             }
         } else {
             console.log("Unhandled")
@@ -203,14 +204,106 @@ export const useDbHelper = () => {
     }
 
 
-    const queueMessage = (ctx: Ctx, msg: { msg: string, after: any }) => {
+    static queueMessage = (ctx: Ctx, msg: { msg: string, after: any }) => {
         ctx.pendingMessages.push(msg);
     }
 
+}
 
-    return {
-        dslToSql, select, insert, deleteRow, updateRow, dbChangeSets, dbMergeChanges, dbCurrentVersion,
-        onmessage, queueMessage
 
-    };
+export class Ctx {
+    pendingMessages: Array<{ msg: string, after: any }>;
+    db!: DB;
+    siteId!: string;
+    rx!: Awaited<ReturnType<typeof tblrx>>;
+    ws!: WSConnection;
+    currentVersion?: number;
+
+
+    constructor(db: DB, siteId: string, rx: Awaited<ReturnType<typeof tblrx>>,
+                currentVersion: number, wsAddress: string, onmessageCallback?: any) {
+        this.pendingMessages = [];
+        this.db = db;
+        this.siteId = siteId;
+        this.rx = rx;
+        this.ws = new WSConnection(this, wsAddress, onmessageCallback);
+        this.currentVersion = currentVersion;
+    }
+}
+
+export const initCtx = async (dsl: DbDsl, wsAddress: string, onmessageCallback?: any): Promise<Ctx> => {
+    let db = await DbHelper.dslToSql(dsl);
+    let rx = tblrx(db);
+    let r = await db.execA("SELECT crsql_siteid()");
+    let siteId = uuidStringify(r[0][0]);
+    let currentVersion = await DbHelper.dbCurrentVersion(db);
+    window.onbeforeunload = () => {
+        db.close().then(() => {
+        });
+    }
+    return new Ctx(db, siteId, rx, currentVersion, wsAddress, onmessageCallback);
+}
+
+class WSConnection {
+    wsAddress: string;
+    ctx: Ctx;
+    ws!: WebSocket;
+    status: number;
+
+    onmessageCallback?: any;
+
+    constructor(ctx: Ctx, wsAddress: string, onmessageCallback?: any) {
+        console.log("Using WSConnection")
+        this.wsAddress = wsAddress
+        this.ctx = ctx;
+        this.status = 0;
+        this.onmessageCallback = onmessageCallback;
+        this.connect();
+    }
+
+    connect() {
+        let ws = new WebSocket(this.wsAddress);
+        let self = this;
+        ws.onopen = () => {
+            console.log("Registering onopen ...");
+            self.status = 1;
+            setInterval(() => {
+                if (this.ctx.pendingMessages.length == 0) {
+                    return;
+                }
+                console.log("Sending messages ...")
+                if (this.ws.bufferedAmount === 0) {
+                    let msgs = this.ctx.pendingMessages;
+                    for (let i = 0; i < msgs.length; i++) {
+                        let m = msgs[i];
+                        this.ws.send(m.msg);
+                        m.after();
+                    }
+                    this.ctx.pendingMessages = [];
+                }
+            }, 50);
+        }
+        ws.onmessage = (c: MessageEvent) => {
+            if (self.status == 0) {
+                console.log("No connection available, Syncing will resume after reconnection");
+            } else {
+                DbHelper.onmessage(this.ctx, c.data).then(() => {
+                    this.onmessageCallback(this.ctx, c.data);
+                });
+            }
+        }
+        ws.onclose = function (e) {
+            self.status = 0
+            console.log('Socket is closed. Reconnect will be attempted in 2 second.', e.reason);
+            setTimeout(function () {
+                self.connect();
+            }, 2000);
+        };
+        ws.onerror = function (ev) {
+            self.status = 0
+            console.error('Socket encountered error: Closing socket');
+            ws.close();
+        };
+        this.ws = ws;
+    }
 }
