@@ -5,3 +5,6 @@
 /crr_poc/.env
 /crr_poc/.env.production
 /stress-test/target/
+/crr_poc/public/web_server_wasm_bg.wasm
+/crr_poc/public/web_server_wasm.js
+/web-server-wasm/wa-sqlite-async.wasm

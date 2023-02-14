@@ -8,7 +8,16 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Made">
+      <change afterPath="$PROJECT_DIR$/web-server-wasm/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-server-wasm/sws.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/sw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,13 +29,66 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev_service_worker" />
+                    <option name="lastUsedInstant" value="1676018700" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1676018699" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/static-web-server" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev_service_worker" />
+                    <option name="lastUsedInstant" value="1676029332" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1676022543" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/axum-0.6.4/src/routing/mod.rs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/crr_poc/node_modules/@vlcn.io/wa-crsqlite/src/wrapper.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/crr_poc/node_modules/typescript/lib/lib.webworker.d.ts" root0="SKIP_INSPECTION" />
   </component>
@@ -59,34 +121,80 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/tpl&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/web-server-wasm/pkg&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.22753906&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.21292776&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.build.tool.cargo&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crr_poc/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-server-wasm/pkg" />
+      <recent name="$PROJECT_DIR$/crr_poc/public" />
+      <recent name="$PROJECT_DIR$/web-server-wasm" />
       <recent name="$PROJECT_DIR$/tpl" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/crr_poc" />
+      <recent name="$PROJECT_DIR$/crr_poc/src" />
       <recent name="$PROJECT_DIR$/build" />
       <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$/build/files" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.build_microservice.sh">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cargo clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Makefile Target.build">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run stress-test" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run --package  stress-test --bin stress-test" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/stress-test" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test web [web-server-wasm]" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package web-server-wasm --test web" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/web-server-wasm" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
@@ -120,20 +228,26 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="build_microservice.sh" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_microservice.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/web-server-wasm/Makefile" target="build" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
+    </configuration>
+    <configuration name="run" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/web-server-wasm/Makefile" target="run" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="Build" type="WasmPackCommandRunConfiguration" factoryName="wasm-pack" nameIsGenerated="true">
+      <option name="command" value="build" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/web-server-wasm" />
+      <option name="command" value="build" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/web-server-wasm" />
+      <method v="2">
+        <option name="WASM_PACK.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
       <deployment type="docker-image">
@@ -152,15 +266,21 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Cargo.Run stress-test" />
       <item itemvalue="Cargo.Run server" />
+      <item itemvalue="Cargo.Test web [web-server-wasm]" />
+      <item itemvalue="Makefile Target.build" />
+      <item itemvalue="Makefile Target.run" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Shell Script.build_microservice.sh" />
+      <item itemvalue="wasm-pack.Build" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.build_microservice.sh" />
-        <item itemvalue="Cargo.Run server" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="Makefile Target.run" />
+        <item itemvalue="Makefile Target.build" />
+        <item itemvalue="Cargo.Test web [web-server-wasm]" />
+        <item itemvalue="Cargo.Run server" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +301,11 @@
       <workItem from="1675495085552" duration="23997000" />
       <workItem from="1675748598332" duration="142000" />
       <workItem from="1675748762758" duration="29657000" />
+      <workItem from="1675840506716" duration="1630000" />
+      <workItem from="1675843247503" duration="14370000" />
+      <workItem from="1675928971836" duration="36708000" />
+      <workItem from="1676267842225" duration="26760000" />
+      <workItem from="1676348818466" duration="2958000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -224,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675780952065</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cleanup and auto uploading of the built artifacts">
+      <created>1675840705996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675840705996</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +380,8 @@
     <MESSAGE value="Fixed annoying issue with websocket onopen event listener&#10;&#10;Details here:&#10;https://stackoverflow.com/questions/8393092/javascript-websockets-control-initial-connection-when-does-onopen-get-bound" />
     <MESSAGE value="Now it totally works with wss and websocket and realtime updates" />
     <MESSAGE value="Added wss server loading from config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added wss server loading from config file" />
+    <MESSAGE value="Cleanup and auto uploading of the built artifacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup and auto uploading of the built artifacts" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

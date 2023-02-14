@@ -51,7 +51,6 @@ class WSConnection {
         let self = this;
         ws.onopen = () => {
             console.log("Registering onopen ...");
-            console.log(ws.extensions);
             self.status = 1;
             setInterval(() => {
                 if (this.ctx.pendingMessages.length == 0) {
@@ -75,7 +74,6 @@ class WSConnection {
                 useDbHelper().onmessage(this.ctx, c.data).then(() => {});
             }
         }
-
         ws.onclose = function(e) {
             self.status = 0
             console.log('Socket is closed. Reconnect will be attempted in 2 second.', e.reason);
@@ -90,6 +88,4 @@ class WSConnection {
         };
         this.ws = ws;
     }
-
-
 }
