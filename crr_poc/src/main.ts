@@ -43,11 +43,6 @@ const main = async () => {
 
     let wsAddress: string = import.meta.env.VITE_WS_SERVER;
     let ctx: Ctx = await initCtx(dsl, wsAddress);
-    window.onbeforeunload = () => {
-        ctx.db.close().then(() => {
-        });
-    }
-
     startApp(ctx);
 }
 

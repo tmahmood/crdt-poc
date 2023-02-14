@@ -1,8 +1,7 @@
-import {wdbRtc} from "@vlcn.io/sync-p2p";
 import tblrx from "@vlcn.io/rx-tbl";
 import {DB} from "@vlcn.io/wa-crsqlite";
-import {DbDsl, useDbHelper} from "./composables/dbHelper";
 import {stringify as uuidStringify} from "uuid";
+import {DbDsl, useDbHelper} from "./dbHelper";
 
 export class Ctx {
     pendingMessages: Array<{ msg: string, after: any }>;

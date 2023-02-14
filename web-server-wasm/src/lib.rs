@@ -34,6 +34,7 @@ fn routes() -> Vec<String> {
     ]
 }
 
+
 #[wasm_bindgen]
 pub async fn available_routes() -> *const String {
     routes().as_ptr()
