@@ -8,3 +8,7 @@
 /crr_poc/public/web_server_wasm_bg.wasm
 /crr_poc/public/web_server_wasm.js
 /web-server-wasm/wa-sqlite-async.wasm
+/crsqlite_helper/node_modules/
+/crsqlite_helper/.parcel-cache/
+/crsqlite_helper/dist/
+/crsqlite_helper/package-lock.json

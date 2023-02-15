@@ -8,21 +8,20 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Crsqlite helper module is working and sync is also working as expected">
+      <change afterPath="$PROJECT_DIR$/sw_poc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crr_poc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/Ctx.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/TaskInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/TaskList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/TaskList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/TodoView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/TodoView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/composables/dbHelper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crsqlite_helper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crsqlite_helper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crsqlite_helper/src/Ctx.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/FromInnerRouter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/sw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crr_poc/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crsqlite_helper/src/dbHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crsqlite_helper/src/dbHelper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_helper.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +77,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="db_wasm_connectivity_using_shared_worker" />
-                    <option name="lastUsedInstant" value="1676384172" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1676396517" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1676375381" />
+                    <option name="branchName" value="db_wasm_connectivity_using_shared_worker" />
+                    <option name="lastUsedInstant" value="1676384172" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev_service_worker" />
@@ -133,7 +132,7 @@
     "dart.analysis.tool.window.visible": "false",
     "go.import.settings.migrated": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crsqlite_helper",
+    "last_opened_file_path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/sw_poc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,25 +143,25 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.22753906",
     "project.structure.side.proportion": "0.21292776",
-    "settings.editor.selected.configurable": "language.rust.build.tool.cargo",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "ts.external.directory.path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crsqlite_helper/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sw_poc" />
       <recent name="$PROJECT_DIR$/crsqlite_helper" />
       <recent name="$PROJECT_DIR$/web-server-wasm/templates" />
       <recent name="$PROJECT_DIR$/web-server-wasm/pkg" />
       <recent name="$PROJECT_DIR$/crr_poc/public" />
-      <recent name="$PROJECT_DIR$/web-server-wasm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sw_poc" />
+      <recent name="$PROJECT_DIR$/crsqlite_helper" />
       <recent name="$PROJECT_DIR$/crsqlite_helper/src" />
       <recent name="$PROJECT_DIR$/crr_poc" />
       <recent name="$PROJECT_DIR$/crr_poc/src" />
-      <recent name="$PROJECT_DIR$/build" />
-      <recent name="$PROJECT_DIR$/conf" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -170,14 +169,14 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.watch">
-    <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+  <component name="RunManager" selected="Cargo.Run server">
+    <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
+      <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
@@ -191,10 +190,10 @@
     <configuration name="Run stress-test" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package  stress-test --bin stress-test" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/stress-test" />
+      <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
@@ -224,7 +223,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
       <makefile filename="$PROJECT_DIR$/web-server-wasm/Makefile" target="build" workingDirectory="" arguments="">
         <envs />
       </makefile>
@@ -233,8 +232,7 @@
     <configuration name="Build" type="WasmPackCommandRunConfiguration" factoryName="wasm-pack" nameIsGenerated="true">
       <option name="command" value="build" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/web-server-wasm" />
-      <option name="command" value="build" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$/web-server-wasm" />
+      <option name="emulateTerminal" value="false" />
       <method v="2">
         <option name="WASM_PACK.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
@@ -245,7 +243,7 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build crsqlite helper" type="js.build_tools.npm" folderName="build crsqlite">
       <package-json value="$PROJECT_DIR$/crsqlite_helper/package.json" />
       <command value="run" />
       <scripts>
@@ -255,7 +253,17 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build poc" type="js.build_tools.npm" folderName="poc">
+      <package-json value="$PROJECT_DIR$/crr_poc/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev poc" type="js.build_tools.npm" folderName="poc">
       <package-json value="$PROJECT_DIR$/crr_poc/package.json" />
       <command value="run" />
       <scripts>
@@ -265,7 +273,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="watch crsqlite helper" type="js.build_tools.npm" folderName="build crsqlite">
       <package-json value="$PROJECT_DIR$/crsqlite_helper/package.json" />
       <command value="run" />
       <scripts>
@@ -275,24 +283,50 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="crr_poc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="crr_poc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Cargo.Run stress-test" />
       <item itemvalue="Cargo.Run server" />
       <item itemvalue="Makefile Target.build" />
-      <item itemvalue="npm.build" />
-      <item itemvalue="npm.watch" />
-      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.build crsqlite helper" />
+      <item itemvalue="npm.watch crsqlite helper" />
+      <item itemvalue="npm.build poc" />
+      <item itemvalue="npm.dev poc" />
       <item itemvalue="wasm-pack.Build" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.watch" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="Makefile Target.build" />
-        <item itemvalue="Cargo.Run server" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -315,7 +349,8 @@
       <workItem from="1675843247503" duration="14370000" />
       <workItem from="1675928971836" duration="36708000" />
       <workItem from="1676267842225" duration="26760000" />
-      <workItem from="1676348818466" duration="19436000" />
+      <workItem from="1676348818466" duration="26385000" />
+      <workItem from="1676447956878" duration="2652000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -387,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676389354005</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Crsqlite helper module is working and sync is also working as expected">
+      <created>1676396093764</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676396093764</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,9 +462,14 @@
     <MESSAGE value="Service worker is now working" />
     <MESSAGE value="Added templating" />
     <MESSAGE value="Moving crsqlite interaction to another module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving crsqlite interaction to another module" />
+    <MESSAGE value="Crsqlite helper module is working and sync is also working as expected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crsqlite helper module is working and sync is also working as expected" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -6,8 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/server/target" />
       <excludeFolder url="file://$MODULE_DIR$/web-server-wasm/target" />
       <excludeFolder url="file://$MODULE_DIR$/stress-test/target" />
-      <excludeFolder url="file://$MODULE_DIR$/crr_poc/dist" />
       <excludeFolder url="file://$MODULE_DIR$/crr_poc/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/crr_poc/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/crsqlite_helper/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/static-web-server" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

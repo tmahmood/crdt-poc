@@ -249,7 +249,6 @@ class WSConnection {
     ctx: Ctx;
     ws!: WebSocket;
     status: number;
-
     onmessageCallback?: any;
 
     constructor(ctx: Ctx, wsAddress: string, onmessageCallback?: any) {

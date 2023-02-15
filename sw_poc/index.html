@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='src/base.css' rel='stylesheet' type='text/css'>
+    <title>Todo</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+<script type="module" src="sw.ts"></script>
+<script>
+    function registerServiceWorker() {
+        if (!navigator.serviceWorker.controller) {
+            console.log("Registering service worker")
+            // Register the ServiceWorker
+            navigator.serviceWorker.register('sw.ts', {scope: '/'})
+                .then((reg) => {
+                    console.log("Registered new service worker")
+                }).catch((e) => {
+                console.log(e);
+            });
+        }
+    }
+    registerServiceWorker();
+</script>
+</html>
