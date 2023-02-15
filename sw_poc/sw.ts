@@ -34,15 +34,14 @@ if ('function' === typeof importScripts) {
                 return fetch(request).then((response) => response);
             } else {
                 let u = request.url.split(self.origin).pop() as string;
+                if (u.startsWith('/assets')) {
+                    return fetch(request);
+                }
                 if (request.method === 'GET') {
                     try {
                         return make_request(u).then((response: string) => {
                             if (response === '') {
-                                if (u === '/' || u === '') {
-                                    return new Response("index.html");
-                                } else {
-                                    return fetch(request);
-                                }
+                                return fetch(request);
                             } else {
                                 return new Response(response, {
                                     headers: {

@@ -8,20 +8,28 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Crsqlite helper module is working and sync is also working as expected">
-      <change afterPath="$PROJECT_DIR$/sw_poc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sw_poc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build_poc_crr.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/App.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sw_poc/vite.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/src/components/FromInnerRouter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/sw.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crr_poc/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/crr_poc/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crsqlite_helper/src/dbHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crsqlite_helper/src/dbHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_helper.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_microservice.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/sw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/sw_poc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +70,6 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="dev_service_worker" />
-                    <option name="lastUsedInstant" value="1676018700" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1676018699" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/static-web-server" />
-            </RecentBranchesForRepo>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1676396517" />
                   </RecentBranch>
@@ -91,6 +84,21 @@
                 </list>
               </option>
               <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1676455211" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev_service_worker" />
+                    <option name="lastUsedInstant" value="1676018700" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/static-web-server" />
             </RecentBranchesForRepo>
           </list>
         </option>
@@ -169,7 +177,7 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Cargo.Run server">
+  <component name="RunManager" selected="Shell Script.build_poc_crr">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
@@ -223,10 +231,25 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/web-server-wasm/Makefile" target="build" workingDirectory="" arguments="">
         <envs />
       </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="build_poc_crr" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_poc_crr.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="Build" type="WasmPackCommandRunConfiguration" factoryName="wasm-pack" nameIsGenerated="true">
@@ -263,11 +286,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/sw_poc/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev poc" type="js.build_tools.npm" folderName="poc">
       <package-json value="$PROJECT_DIR$/crr_poc/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/sw_poc/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -325,8 +368,19 @@
       <item itemvalue="npm.watch crsqlite helper" />
       <item itemvalue="npm.build poc" />
       <item itemvalue="npm.dev poc" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Shell Script.build_poc_crr" />
       <item itemvalue="wasm-pack.Build" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.build_poc_crr" />
+        <item itemvalue="Makefile Target.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -350,7 +404,7 @@
       <workItem from="1675928971836" duration="36708000" />
       <workItem from="1676267842225" duration="26760000" />
       <workItem from="1676348818466" duration="26385000" />
-      <workItem from="1676447956878" duration="2652000" />
+      <workItem from="1676447956878" duration="8132000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -429,16 +483,18 @@
       <option name="project" value="LOCAL" />
       <updated>1676396093764</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Removed Service Worker from Database POC. It's going to be used only for Database implementation. Will use sw_poc to implement WASM Routing + Database interaction">
+      <created>1676450891804</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676450891804</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/crsqlite_helper/src/dbHelper.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -463,7 +519,8 @@
     <MESSAGE value="Added templating" />
     <MESSAGE value="Moving crsqlite interaction to another module" />
     <MESSAGE value="Crsqlite helper module is working and sync is also working as expected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crsqlite helper module is working and sync is also working as expected" />
+    <MESSAGE value="Removed Service Worker from Database POC. It's going to be used only for Database implementation. Will use sw_poc to implement WASM Routing + Database interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Service Worker from Database POC. It's going to be used only for Database implementation. Will use sw_poc to implement WASM Routing + Database interaction" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

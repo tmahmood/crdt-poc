@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href='src/base.css' rel='stylesheet' type='text/css'>
-    <title>Todo</title>
-</head>
-<body>
-<div id="app"></div>
-<script type="module" src="/src/main.ts"></script>
-</body>
-<script type="module" src="sw.ts"></script>
-<script>
-    function registerServiceWorker() {
-        if (!navigator.serviceWorker.controller) {
-            console.log("Registering service worker")
-            // Register the ServiceWorker
-            navigator.serviceWorker.register('sw.ts', {scope: '/'})
-                .then((reg) => {
-                    console.log("Registered new service worker")
-                }).catch((e) => {
-                console.log(e);
-            });
-        }
-    }
-    registerServiceWorker();
-</script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <title>Solid App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
 </html>

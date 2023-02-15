@@ -12,3 +12,6 @@
 /crsqlite_helper/.parcel-cache/
 /crsqlite_helper/dist/
 /crsqlite_helper/package-lock.json
+/sw_poc/web_server_wasm_bg.wasm
+/sw_poc/web_server_wasm.js
+/sw_poc/package-lock.json
