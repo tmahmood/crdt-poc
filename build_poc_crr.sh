@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 APP_NAME="crr_poc"
-echo "$APP_NAME"
 ROOT_DIR=$(pwd)
 BUILD_DIR_APP=$ROOT_DIR/build/$APP_NAME
 BUILD_FILES=$ROOT_DIR/build/$APP_NAME/files
