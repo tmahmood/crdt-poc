@@ -9,9 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_poc_crr.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_poc_crr.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,27 +157,10 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile Target.upload">
+  <component name="RunManager" selected="npm.watch crsqlite helper">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
-      <option name="emulateTerminal" value="false" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Run stress-test" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run --package  stress-test --bin stress-test" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$/stress-test" />
       <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -211,36 +192,6 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <method v="2" />
-    </configuration>
-    <configuration name="build (1)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="build_sws" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build_sws" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="build_web" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build_web" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="copy_tpl" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="copy_tpl" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="upload" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="upload" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
       <method v="2" />
     </configuration>
     <configuration name="Build" type="WasmPackCommandRunConfiguration" factoryName="wasm-pack" nameIsGenerated="true">
@@ -332,28 +283,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Cargo.Run stress-test" />
       <item itemvalue="Cargo.Run server" />
-      <item itemvalue="Makefile Target.build (1)" />
-      <item itemvalue="Makefile Target.build_sws" />
-      <item itemvalue="Makefile Target.build_web" />
-      <item itemvalue="Makefile Target.copy_tpl" />
-      <item itemvalue="Makefile Target.upload" />
       <item itemvalue="npm.build crsqlite helper" />
       <item itemvalue="npm.watch crsqlite helper" />
       <item itemvalue="npm.build poc" />
       <item itemvalue="npm.dev poc" />
       <item itemvalue="wasm-pack.Build" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Makefile Target.upload" />
-        <item itemvalue="Makefile Target.build_web" />
-        <item itemvalue="Makefile Target.build (1)" />
-        <item itemvalue="Makefile Target.copy_tpl" />
-        <item itemvalue="Makefile Target.build_sws" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -377,7 +313,7 @@
       <workItem from="1675928971836" duration="36708000" />
       <workItem from="1676267842225" duration="26760000" />
       <workItem from="1676348818466" duration="26385000" />
-      <workItem from="1676447956878" duration="12220000" />
+      <workItem from="1676447956878" duration="13120000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -470,7 +406,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676457443513</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added makefile to build crr_poc">
+      <created>1676461581281</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676461581281</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Deleted shell script, as I am now using makefile">
+      <created>1676461613073</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676461613073</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Core makefile now builds all the things">
+      <created>1676462402281</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676462402281</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +458,10 @@
     <MESSAGE value="Crsqlite helper module is working and sync is also working as expected" />
     <MESSAGE value="Removed Service Worker from Database POC. It's going to be used only for Database implementation. Will use sw_poc to implement WASM Routing + Database interaction" />
     <MESSAGE value="crr_poc building does not require wasm anymore, as it's a poc for database integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="crr_poc building does not require wasm anymore, as it's a poc for database integration" />
+    <MESSAGE value="Added makefile to build crr_poc" />
+    <MESSAGE value="Deleted shell script, as I am now using makefile" />
+    <MESSAGE value="Core makefile now builds all the things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Core makefile now builds all the things" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
