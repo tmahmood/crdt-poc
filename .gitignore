@@ -15,3 +15,4 @@
 /sw_poc/web_server_wasm_bg.wasm
 /sw_poc/web_server_wasm.js
 /sw_poc/package-lock.json
+/sw/dist/

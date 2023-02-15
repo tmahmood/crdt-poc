@@ -9,7 +9,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sw/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-server-wasm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wasm-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wasm-dev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sw/sw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/sws.toml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/sws.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/web-server-wasm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/web-server-wasm.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,17 +149,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sw_poc" />
+      <recent name="$PROJECT_DIR$/build/app" />
+      <recent name="$PROJECT_DIR$/web-server-wasm/sw" />
+      <recent name="$PROJECT_DIR$/web-server-wasm" />
       <recent name="$PROJECT_DIR$/crsqlite_helper" />
-      <recent name="$PROJECT_DIR$/web-server-wasm/templates" />
-      <recent name="$PROJECT_DIR$/web-server-wasm/pkg" />
-      <recent name="$PROJECT_DIR$/crr_poc/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/sw_poc" />
       <recent name="$PROJECT_DIR$/crsqlite_helper" />
       <recent name="$PROJECT_DIR$/crsqlite_helper/src" />
       <recent name="$PROJECT_DIR$/crr_poc" />
-      <recent name="$PROJECT_DIR$/crr_poc/src" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -157,7 +167,7 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.watch crsqlite helper">
+  <component name="RunManager" selected="Makefile Target.build_wasm_web_app">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
@@ -192,6 +202,24 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build_sw" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build_sw" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="build_wasm_web_app" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build_wasm_web_app" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="run_sw_service" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run_sw_service" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
     <configuration name="Build" type="WasmPackCommandRunConfiguration" factoryName="wasm-pack" nameIsGenerated="true">
@@ -284,12 +312,22 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Run server" />
+      <item itemvalue="Makefile Target.build_sw" />
+      <item itemvalue="Makefile Target.build_wasm_web_app" />
+      <item itemvalue="Makefile Target.run_sw_service" />
       <item itemvalue="npm.build crsqlite helper" />
       <item itemvalue="npm.watch crsqlite helper" />
       <item itemvalue="npm.build poc" />
       <item itemvalue="npm.dev poc" />
       <item itemvalue="wasm-pack.Build" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.run_sw_service" />
+        <item itemvalue="Makefile Target.build_wasm_web_app" />
+        <item itemvalue="Makefile Target.build_sw" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -313,7 +351,7 @@
       <workItem from="1675928971836" duration="36708000" />
       <workItem from="1676267842225" duration="26760000" />
       <workItem from="1676348818466" duration="26385000" />
-      <workItem from="1676447956878" duration="13120000" />
+      <workItem from="1676447956878" duration="27033000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -427,11 +465,29 @@
       <option name="project" value="LOCAL" />
       <updated>1676462402281</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Core makefile now builds all the things">
+      <created>1676462425832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676462425832</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

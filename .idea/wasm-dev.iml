@@ -4,7 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/server/target" />
-      <excludeFolder url="file://$MODULE_DIR$/web-server-wasm/target" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/stress-test/target" />
       <excludeFolder url="file://$MODULE_DIR$/crr_poc/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/crr_poc/dist" />

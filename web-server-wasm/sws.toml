@@ -1,3 +1,17 @@
+[general]
+port=8787
+compression = true
+
+
+#### CORS
+cors-allow-origins = ""
+cors-allow-headers = ""
+
+#### Directory listing
+directory-listing = true
+log-level = "trace"
+
+
 [advanced]
 
 [[advanced.headers]]
