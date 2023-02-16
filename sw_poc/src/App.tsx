@@ -19,6 +19,10 @@ const App: Component = () => {
         >
           Learn Solid
         </a>
+        <ul>
+          <li><a href="/earth">Hello Earth</a></li>
+          <li><a href="/mars">Hello Mars</a></li>
+        </ul>
       </header>
     </div>
   );
