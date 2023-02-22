@@ -9,18 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tpl/Dockerfile-sw-db-poc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/build-sw-db-poc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/entry_point-sw-db-poc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc.godly.dev.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-server-wasm/templates/world.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw_poc/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/src/App.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw_poc/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/earth.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/earth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/mars.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/mars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -384,7 +373,7 @@
       <workItem from="1676965996161" duration="4823000" />
       <workItem from="1677047549396" duration="520000" />
       <workItem from="1677049915782" duration="4289000" />
-      <workItem from="1677061206506" duration="5019000" />
+      <workItem from="1677061206506" duration="5130000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -526,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677043300604</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Now it's working with some prototype activities inside">
+      <created>1677066380673</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677066380673</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +570,8 @@
     <MESSAGE value="Core makefile now builds all the things" />
     <MESSAGE value="Hackish way to import wasm file in Service Worker" />
     <MESSAGE value="Now it's working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now it's working!" />
+    <MESSAGE value="Now it's working with some prototype activities inside" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now it's working with some prototype activities inside" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

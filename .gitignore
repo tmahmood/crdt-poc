@@ -17,3 +17,6 @@
 /sw_poc/package-lock.json
 /sw/dist/
 /sw_poc/sw.js
+/web-server-wasm/index.js
+/web-server-wasm/index.css
+/web-server-wasm/files.txt
