@@ -1,7 +1,6 @@
 FROM archlinux:latest
 
 EXPOSE 80
-EXPOSE 9000
 WORKDIR /app
 COPY ./public ./public
 COPY sws ./

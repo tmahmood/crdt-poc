@@ -1,14 +1,12 @@
 [general]
-port=8787
+port=80
 compression = true
+
 
 
 #### CORS
 cors-allow-origins = ""
 cors-allow-headers = ""
-
-#### Directory listing
-directory-listing = true
 
 
 [advanced]

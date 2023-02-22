@@ -8,8 +8,22 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Now it's working with some prototype activities inside">
+      <change afterPath="$PROJECT_DIR$/tpl/crr_poc/sws_dev.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/entry_point.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sws.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sws_dev.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/Dockerfile-sw-db-poc" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/sw-db-poc/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/build-sw-db-poc.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/entry_point-sw-db-poc.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/entry_point.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/entry_point.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/sw-db-poc.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sw-db-poc.godly.dev.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/todo-in-browser.godly.dev.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/sws.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/sws.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +144,7 @@
     "dart.analysis.tool.window.visible": "false",
     "go.import.settings.migrated": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/tpl",
+    "last_opened_file_path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/tpl/sw-db-poc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -148,18 +162,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tpl/sw-db-poc" />
+      <recent name="$PROJECT_DIR$/tpl/crr_poc" />
       <recent name="$PROJECT_DIR$/tpl" />
       <recent name="$PROJECT_DIR$/build/app" />
       <recent name="$PROJECT_DIR$/build/app/public" />
-      <recent name="$PROJECT_DIR$/web-server-wasm/templates" />
-      <recent name="$PROJECT_DIR$/sw" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tpl/crr_poc" />
+      <recent name="$PROJECT_DIR$/tpl/sw-db-poc" />
+      <recent name="$PROJECT_DIR$/tpl" />
       <recent name="$PROJECT_DIR$/build/app" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/sw_poc" />
-      <recent name="$PROJECT_DIR$/crsqlite_helper" />
-      <recent name="$PROJECT_DIR$/crsqlite_helper/src" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -167,7 +181,7 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile Target.run_sw_service">
+  <component name="RunManager" selected="Makefile Target.run_crr_poc">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
@@ -204,26 +218,26 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="build_sw" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build_sw" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="build_sw_poc" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build_sw_poc" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="build_wasm" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="build_wasm" workingDirectory="" arguments="">
+    <configuration name="build_crr_poc" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build_crr_poc" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
     <configuration name="build_wasm_web_app" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="build_wasm_web_app" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="copy_tpl_wasm" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="copy_tpl_wasm" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="run_crr_poc" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run_crr_poc" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -324,9 +338,9 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Run server" />
-      <item itemvalue="Makefile Target.build_sw" />
-      <item itemvalue="Makefile Target.build_sw_poc" />
-      <item itemvalue="Makefile Target.build_wasm" />
+      <item itemvalue="Makefile Target.build_crr_poc" />
+      <item itemvalue="Makefile Target.copy_tpl_wasm" />
+      <item itemvalue="Makefile Target.run_crr_poc" />
       <item itemvalue="Makefile Target.build_wasm_web_app" />
       <item itemvalue="Makefile Target.run_sw_service" />
       <item itemvalue="npm.build crsqlite helper" />
@@ -337,11 +351,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.run_crr_poc" />
         <item itemvalue="Makefile Target.run_sw_service" />
+        <item itemvalue="Makefile Target.copy_tpl_wasm" />
+        <item itemvalue="Makefile Target.build_crr_poc" />
         <item itemvalue="Makefile Target.build_wasm_web_app" />
-        <item itemvalue="Makefile Target.build_wasm" />
-        <item itemvalue="Makefile Target.build_sw_poc" />
-        <item itemvalue="Makefile Target.build_sw" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +387,7 @@
       <workItem from="1676965996161" duration="4823000" />
       <workItem from="1677047549396" duration="520000" />
       <workItem from="1677049915782" duration="4289000" />
-      <workItem from="1677061206506" duration="5130000" />
+      <workItem from="1677061206506" duration="14020000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -522,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677066380673</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Now it's working with some prototype activities inside">
+      <created>1677066429472</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677066429472</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

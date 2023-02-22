@@ -1,0 +1,19 @@
+[general]
+port=8787
+compression = true
+
+
+
+#### CORS
+cors-allow-origins = ""
+cors-allow-headers = ""
+
+#### Directory listing
+directory-listing = true
+
+
+[advanced]
+
+[[advanced.headers]]
+source = "**/*.{wasm}"
+headers = { Content-Type = "application/wasm" }
