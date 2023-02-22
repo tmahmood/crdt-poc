@@ -9,7 +9,6 @@ cors-allow-headers = ""
 
 #### Directory listing
 directory-listing = true
-log-level = "trace"
 
 
 [advanced]

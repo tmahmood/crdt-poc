@@ -46,13 +46,15 @@ upload_crr_poc: build_crr_poc
 
 build_sw_poc:
 	cd ${SRC_DIR_SW_POC}; npm run build
+	cd ${SRC_DIR_SW_POC}/dist/assets; cat *.js > ${SRC_DIR_WASM}/index.js
+	cd ${SRC_DIR_SW_POC}/dist/assets; cat *.css > ${SRC_DIR_WASM}/index.css
 	cd ${SRC_DIR_SW_POC}/dist/; find assets/* > ${SRC_DIR_WASM}/files.txt
+
 
 # Building WASM
 build_wasm: build_sw_poc
-	cd ${SRC_DIR_WASM}; \
-	@rm pkg/* || echo "nothing here"; \
-	RUST_BACKTRACE=1 wasm-pack build --target no-modules --release
+	cd ${SRC_DIR_WASM};
+	cd ${SRC_DIR_WASM}; rm pkg/* || echo "nothing here"; RUST_BACKTRACE=1 wasm-pack build --target no-modules
 
 build_sw: build_wasm
 	cd ${SRC_DIR_SW}; tsc

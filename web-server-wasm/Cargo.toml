@@ -20,7 +20,6 @@ serde-wasm-bindgen = "0.4.5"
 tower-service = "0.3.2"
 http = "0.2.8"
 http-body = "1.0.0-rc1"
-lazy_static = "1.4.0"
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
 # all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
