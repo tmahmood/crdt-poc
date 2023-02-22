@@ -8,22 +8,9 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Now it's working with some prototype activities inside">
-      <change afterPath="$PROJECT_DIR$/tpl/crr_poc/sws_dev.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/entry_point.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sws.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sws_dev.toml" afterDir="false" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/Dockerfile-sw-db-poc" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/sw-db-poc/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/build-sw-db-poc.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/entry_point-sw-db-poc.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/entry_point.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/entry_point.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/sw-db-poc.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/sw-db-poc/sw-db-poc.godly.dev.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpl/todo-in-browser.godly.dev.conf" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/todo-in-browser.godly.dev.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/sws.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/crr_poc/sws.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +168,7 @@
       <command value="cargo clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile Target.run_crr_poc">
+  <component name="RunManager" selected="Makefile Target.run_sw_service">
     <configuration name="Run server" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package server --bin server" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$/server" />
@@ -351,9 +338,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.run_crr_poc" />
         <item itemvalue="Makefile Target.run_sw_service" />
         <item itemvalue="Makefile Target.copy_tpl_wasm" />
+        <item itemvalue="Makefile Target.run_crr_poc" />
         <item itemvalue="Makefile Target.build_crr_poc" />
         <item itemvalue="Makefile Target.build_wasm_web_app" />
       </list>
@@ -387,7 +374,7 @@
       <workItem from="1676965996161" duration="4823000" />
       <workItem from="1677047549396" duration="520000" />
       <workItem from="1677049915782" duration="4289000" />
-      <workItem from="1677061206506" duration="14020000" />
+      <workItem from="1677061206506" duration="14377000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -543,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677066429472</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Makefile improvements">
+      <created>1677076587205</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677076587205</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +586,8 @@
     <MESSAGE value="Hackish way to import wasm file in Service Worker" />
     <MESSAGE value="Now it's working!" />
     <MESSAGE value="Now it's working with some prototype activities inside" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now it's working with some prototype activities inside" />
+    <MESSAGE value="Makefile improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Makefile improvements" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

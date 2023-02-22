@@ -69,12 +69,16 @@ build_sw_poc:
 build_sw: build_wasm
 	cd ${SRC_DIR_SW}; tsc
 	sed -i "s/export {};//g" ${SRC_DIR_SW}/dist/sw.js
+	sed -i "s/web_server_wasm.js/web_server_wasm-${UUID}.js/g" ${SRC_DIR_SW}/dist/sw.js
+	sed -i "s/web_server_wasm_bg.wasm/web_server_wasm_bg-${UUID}.wasm/g" ${SRC_DIR_SW}/dist/sw.js
 
 build_wasm_web_app: build_static_web_server build_sw
 	rm -rf ${BUILD_WEB_APP} || echo "Not found"
 	mkdir ${BUILD_WEB_APP}
 	cp -r ${SRC_DIR_SW_POC}/dist ${BUILD_WEB_APP}/public
-	cp ${SRC_DIR_WASM}/pkg/{web_server_wasm_bg.wasm,web_server_wasm.js} ${BUILD_WEB_APP}/public/assets/
+	cp ${SRC_DIR_WASM}/pkg/web_server_wasm_bg.wasm ${BUILD_WEB_APP}/public/assets/web_server_wasm_bg-${UUID}.wasm
+	cp ${SRC_DIR_WASM}/pkg/web_server_wasm.js ${BUILD_WEB_APP}/public/assets/web_server_wasm-${UUID}.js
+	# cp ${SRC_DIR_WASM}/pkg/{web_server_wasm_bg.wasm,web_server_wasm.js} ${BUILD_WEB_APP}/public/assets/
 	cp ${SRC_DIR_SWS}/target/release/static-web-server ${BUILD_WEB_APP}/sws
 	cp ${SRC_DIR_SW}/dist/sw.js ${BUILD_WEB_APP}/public
 
