@@ -8,17 +8,18 @@
     <cargoProject FILE="$PROJECT_DIR$/web-server-wasm/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="Service worker is now working and loading solidjs?">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+    <list default="true" id="9692b45c-798e-4525-9ced-e69bcce62b9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tpl/Dockerfile-sw-db-poc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/build-sw-db-poc.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/entry_point-sw-db-poc.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/sw-db-poc.godly.dev.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-server-wasm/templates/world.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw/sw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sw/sw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw_poc/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/src/App.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sw_poc/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sw_poc/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/sws.toml" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/sws.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/earth.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/earth.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-server-wasm/templates/mars.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-server-wasm/templates/mars.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,12 +76,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="dev_solidjs" />
-                    <option name="lastUsedInstant" value="1676544070" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1677043310" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1676544020" />
+                    <option name="branchName" value="dev_solidjs" />
+                    <option name="lastUsedInstant" value="1676544070" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="db_wasm_connectivity_using_shared_worker" />
@@ -130,46 +131,46 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/sw&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.22753906&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.21292776&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crr_poc/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "go.import.settings.migrated": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/tpl",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.22753906",
+    "project.structure.side.proportion": "0.21292776",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/mahmood/Documents/1Projects/Ahead/wasm-dev/crr_poc/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sw" />
-      <recent name="$PROJECT_DIR$/sw_poc" />
+      <recent name="$PROJECT_DIR$/tpl" />
       <recent name="$PROJECT_DIR$/build/app" />
-      <recent name="$PROJECT_DIR$/web-server-wasm/sw" />
-      <recent name="$PROJECT_DIR$/web-server-wasm" />
+      <recent name="$PROJECT_DIR$/build/app/public" />
+      <recent name="$PROJECT_DIR$/web-server-wasm/templates" />
+      <recent name="$PROJECT_DIR$/sw" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build/app" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/sw_poc" />
       <recent name="$PROJECT_DIR$/crsqlite_helper" />
       <recent name="$PROJECT_DIR$/crsqlite_helper/src" />
-      <recent name="$PROJECT_DIR$/crr_poc" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -380,7 +381,10 @@
       <workItem from="1676447956878" duration="50675000" />
       <workItem from="1676550008211" duration="5292000" />
       <workItem from="1676900169093" duration="20945000" />
-      <workItem from="1676965996161" duration="2176000" />
+      <workItem from="1676965996161" duration="4823000" />
+      <workItem from="1677047549396" duration="520000" />
+      <workItem from="1677049915782" duration="4289000" />
+      <workItem from="1677061206506" duration="5019000" />
     </task>
     <task id="LOCAL-00001" summary="Moved around some files">
       <created>1675425512799</created>
@@ -515,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676543985326</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Now it's working!">
+      <created>1677043300604</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677043300604</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +573,8 @@
     <MESSAGE value="Deleted shell script, as I am now using makefile" />
     <MESSAGE value="Core makefile now builds all the things" />
     <MESSAGE value="Hackish way to import wasm file in Service Worker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hackish way to import wasm file in Service Worker" />
+    <MESSAGE value="Now it's working!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now it's working!" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -5,21 +5,28 @@ use axum::body::{Body, Bytes};
 use axum::body::HttpBody;
 use http::{Request};
 use std::str;
+use serde::{Deserialize, Serialize};
 use text_placeholder::Template;
 use tower_service::Service;
 
 
+#[derive(Deserialize, Serialize)]
+struct PageLink {
+    text: String,
+    link: String,
+}
+
 #[wasm_bindgen]
 pub async fn make_request(uri: String) -> String {
-
     let mut found = 0;
     let routes = vec![
-            "/".to_string(),
-            "/earth".to_string(),
-            "/mars".to_string(),
-            "/assets/index.js".to_string(),
-            "/assets/index.css".to_string()
-        ];
+        "/links".to_string(),
+        "/earth".to_string(),
+        "/mars".to_string(),
+        "/world".to_string(),
+        "/assets/index.js".to_string(),
+        "/assets/index.css".to_string(),
+    ];
     for i in 0..routes.len() {
         if uri == routes[i] {
             found = 1;
@@ -30,8 +37,9 @@ pub async fn make_request(uri: String) -> String {
         return "".into();
     }
     let mut router: Router = Router::new()
-        .route("/", get(index))
+        .route("/links", get(links))
         .route("/earth", get(earth))
+        .route("/world", get(world))
         .route("/assets/index.js", get(app_js))
         .route("/assets/index.css", get(app_css))
         .route("/mars", get(mars));
@@ -47,10 +55,10 @@ pub async fn make_request(uri: String) -> String {
 
 
 fn build_html(map: HashMap<&str, &str>) -> Html<String> {
-    let files:Vec<&str> = include_str!("../files.txt").lines().collect();
+    let files: Vec<&str> = include_str!("../files.txt").lines().collect();
     let mut h = HashMap::new();
     for i in 0..files.len() {
-        let file:&str = files[i];
+        let file: &str = files[i];
         if file.ends_with("css") {
             h.insert("CSS_FILE", file);
         } else if file.ends_with("ico") {
@@ -70,6 +78,13 @@ async fn earth() -> Html<String> {
     build_html(h)
 }
 
+async fn world() -> Html<String> {
+    let mut h = HashMap::new();
+    let body = include_str!("../templates/world.html");
+    h.insert("body", body);
+    build_html(h)
+}
+
 async fn mars() -> Html<String> {
     let mut h = HashMap::new();
     let body = include_str!("../templates/mars.html");
@@ -77,11 +92,13 @@ async fn mars() -> Html<String> {
     build_html(h)
 }
 
-async fn index() -> Html<String> {
-    let mut h = HashMap::new();
-    let body = include_str!("../templates/index.html");
-    h.insert("body", body);
-    build_html(h)
+async fn links() -> String {
+    let pages = vec![
+        PageLink { text: "mars".to_string(), link: "/mars".to_string() },
+        PageLink { text: "earth".to_string(), link: "/earth".to_string() },
+        PageLink { text: "world".to_string(), link: "/world".to_string() },
+    ];
+    serde_json::to_string(&pages).unwrap()
 }
 
 async fn app_js() -> String {
