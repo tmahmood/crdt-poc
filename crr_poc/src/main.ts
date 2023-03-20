@@ -44,6 +44,8 @@ const main = async () => {
     let ctx: Ctx = await initCtx(dsl, wsAddress, (ctx: Ctx, messageData: any) => {
         reloadAllTodosList(ctx);
     }) ;
+
+    window.onbeforeunload = () => ctx.db.close().then(() => {});
     startApp(ctx);
 }
 

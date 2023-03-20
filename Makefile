@@ -11,7 +11,7 @@ SRC_DIR_APP=${ROOT_DIR}/${APP_NAME}
 SRC_DIR_SERVER=${ROOT_DIR}/server
 
 build_crr_poc: clear_crr_poc mk_build_dir build_server build_static_web_server copy_tpl_crr_poc
-	cd ${SRC_DIR_APP} && npm run build && cp -r dist ${BUILD_FILES}/public
+	cd ${SRC_DIR_APP} && npm install && npm run build && cp -r dist ${BUILD_FILES}/public
 
 mk_build_dir:
 	mkdir -p ${BUILD_FILES}
