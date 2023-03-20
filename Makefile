@@ -10,6 +10,10 @@ BUILD_FILES=${ROOT_DIR}/build/${APP_NAME}/files
 SRC_DIR_APP=${ROOT_DIR}/${APP_NAME}
 SRC_DIR_SERVER=${ROOT_DIR}/server
 
+
+all: build_crr_poc
+run: run_crr_poc
+
 build_crr_poc: clear_crr_poc mk_build_dir build_server build_static_web_server copy_tpl_crr_poc
 	cd ${SRC_DIR_APP} && npm install && npm run build && cp -r dist ${BUILD_FILES}/public
 
